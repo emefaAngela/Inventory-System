@@ -48,6 +48,8 @@ namespace ManagementSystem
                 command.ExecuteNonQuery();
                 connection.Close();
                 MessageBox.Show("Product has been added succesfully");
+                
+
 
             }
             else
@@ -56,6 +58,8 @@ namespace ManagementSystem
             }
             
             this.Close();
+           
+           
         }
     }
 }
