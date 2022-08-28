@@ -40,6 +40,8 @@ namespace ManagementSystem
             this.atten_email = new System.Windows.Forms.TextBox();
             this.updateAttendant = new System.Windows.Forms.Button();
             this.deleteAttendant = new System.Windows.Forms.Button();
+            this.atten_id = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,7 +72,7 @@ namespace ManagementSystem
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label1.Location = new System.Drawing.Point(40, 43);
+            this.label1.Location = new System.Drawing.Point(40, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(183, 25);
             this.label1.TabIndex = 3;
@@ -79,7 +81,7 @@ namespace ManagementSystem
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(86, 105);
+            this.label2.Location = new System.Drawing.Point(86, 68);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(126, 20);
             this.label2.TabIndex = 4;
@@ -88,7 +90,7 @@ namespace ManagementSystem
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(86, 180);
+            this.label3.Location = new System.Drawing.Point(86, 143);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(123, 20);
             this.label3.TabIndex = 5;
@@ -97,7 +99,7 @@ namespace ManagementSystem
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(86, 144);
+            this.label4.Location = new System.Drawing.Point(86, 107);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(153, 20);
             this.label4.TabIndex = 6;
@@ -105,7 +107,7 @@ namespace ManagementSystem
             // 
             // atten_name
             // 
-            this.atten_name.Location = new System.Drawing.Point(250, 99);
+            this.atten_name.Location = new System.Drawing.Point(250, 62);
             this.atten_name.Name = "atten_name";
             this.atten_name.Size = new System.Drawing.Size(442, 26);
             this.atten_name.TabIndex = 7;
@@ -113,14 +115,14 @@ namespace ManagementSystem
             // 
             // atten_password
             // 
-            this.atten_password.Location = new System.Drawing.Point(250, 141);
+            this.atten_password.Location = new System.Drawing.Point(250, 104);
             this.atten_password.Name = "atten_password";
             this.atten_password.Size = new System.Drawing.Size(442, 26);
             this.atten_password.TabIndex = 8;
             // 
             // atten_email
             // 
-            this.atten_email.Location = new System.Drawing.Point(250, 180);
+            this.atten_email.Location = new System.Drawing.Point(250, 143);
             this.atten_email.Name = "atten_email";
             this.atten_email.Size = new System.Drawing.Size(442, 26);
             this.atten_email.TabIndex = 9;
@@ -137,6 +139,7 @@ namespace ManagementSystem
             this.updateAttendant.TabIndex = 10;
             this.updateAttendant.Text = "Update Details";
             this.updateAttendant.UseVisualStyleBackColor = false;
+            this.updateAttendant.Click += new System.EventHandler(this.updateAttendant_Click);
             // 
             // deleteAttendant
             // 
@@ -149,12 +152,31 @@ namespace ManagementSystem
             this.deleteAttendant.TabIndex = 11;
             this.deleteAttendant.Text = "Delete Attendant";
             this.deleteAttendant.UseVisualStyleBackColor = false;
+            this.deleteAttendant.Click += new System.EventHandler(this.deleteAttendant_Click);
+            // 
+            // atten_id
+            // 
+            this.atten_id.Location = new System.Drawing.Point(250, 184);
+            this.atten_id.Name = "atten_id";
+            this.atten_id.Size = new System.Drawing.Size(442, 26);
+            this.atten_id.TabIndex = 13;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(86, 184);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(101, 20);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "Attendant ID";
             // 
             // ManageAttendants
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.atten_id);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.deleteAttendant);
             this.Controls.Add(this.updateAttendant);
             this.Controls.Add(this.atten_email);
@@ -187,5 +209,7 @@ namespace ManagementSystem
         private System.Windows.Forms.TextBox atten_email;
         private System.Windows.Forms.Button updateAttendant;
         private System.Windows.Forms.Button deleteAttendant;
+        private System.Windows.Forms.TextBox atten_id;
+        private System.Windows.Forms.Label label5;
     }
 }

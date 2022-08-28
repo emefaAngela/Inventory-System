@@ -74,5 +74,63 @@ namespace ManagementSystem
         {
 
         }
+
+        private void updateAttendant_Click(object sender, EventArgs e)
+        {
+            String name = atten_name.Text;
+            String email = atten_email.Text;
+            String password = atten_password.Text;
+            String id = atten_id.Text;
+            if (name != "" && email != "" && password != ""&& id!="")
+
+            {
+                connection = new MySqlConnection(connectionstring);
+                connection.Open();
+                MySqlCommand command = connection.CreateCommand();
+                command.CommandText = "update attendants set attendant_name=?name,attendant_email=?email,attendant_password=?password where attendant_id=?id";
+
+                command.Parameters.AddWithValue("?name", name);
+                command.Parameters.AddWithValue("?password", password);
+                command.Parameters.AddWithValue("?email", email);
+                command.Parameters.AddWithValue("?id", id);
+                command.ExecuteNonQuery();
+                connection.Close();
+                MessageBox.Show("Attendant has been updated succesfully");
+                loaddata();
+
+            }
+            else
+            {
+                MessageBox.Show("Please Provide Details!");
+            }
+        }
+
+        private void deleteAttendant_Click(object sender, EventArgs e)
+        {
+            String name = atten_name.Text;
+            String email = atten_email.Text;
+            String password = atten_password.Text;
+            String id = atten_id.Text;
+            if (name != "" && email != "" && password != "" && id != "")
+
+            {
+                connection = new MySqlConnection(connectionstring);
+                connection.Open();
+                MySqlCommand command = connection.CreateCommand();
+                command.CommandText = "delete from attendants where attendant_id=?id";
+
+               
+                command.Parameters.AddWithValue("?id", id);
+                command.ExecuteNonQuery();
+                connection.Close();
+                MessageBox.Show("Attendant has been deleted succesfully");
+                loaddata();
+
+            }
+            else
+            {
+                MessageBox.Show("Please Provide Details!");
+            }
+        }
     }
 }
