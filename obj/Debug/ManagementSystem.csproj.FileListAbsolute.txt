@@ -35,3 +35,4 @@ D:\dev\managementsystem\ManagementSystem\obj\Debug\ManagementSystem.AddCategory.
 D:\dev\managementsystem\ManagementSystem\obj\Debug\ManagementSystem.AddAttendant.resources
 D:\dev\managementsystem\ManagementSystem\obj\Debug\ManagementSystem.ManageAttendants.resources
 D:\dev\managementsystem\ManagementSystem\obj\Debug\ManagementSystem.RecordTransaction.resources
+D:\dev\managementsystem\ManagementSystem\obj\Debug\ManagementSystem.ManageProducts.resources

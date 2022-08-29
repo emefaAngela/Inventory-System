@@ -185,6 +185,9 @@
     <EmbeddedResource Include="ManageCategories.resx">
       <DependentUpon>ManageCategories.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ManageProducts.resx">
+      <DependentUpon>ManageProducts.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
