@@ -36,3 +36,4 @@ D:\dev\managementsystem\ManagementSystem\obj\Debug\ManagementSystem.AddAttendant
 D:\dev\managementsystem\ManagementSystem\obj\Debug\ManagementSystem.ManageAttendants.resources
 D:\dev\managementsystem\ManagementSystem\obj\Debug\ManagementSystem.RecordTransaction.resources
 D:\dev\managementsystem\ManagementSystem\obj\Debug\ManagementSystem.ManageProducts.resources
+D:\dev\managementsystem\ManagementSystem\obj\Debug\ManagementSystem.ManageSales.resources

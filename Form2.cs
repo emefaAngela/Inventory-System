@@ -31,17 +31,24 @@ namespace ManagementSystem
             if (username != "" && pass != "")
             {
                 
-                string query = "select user_name,user_password from user WHERE user_name ='" + username + "' AND user_password ='" + pass + "'";
+                string query = "select user_name,user_password,user_role from user WHERE user_name ='" + username + "' AND user_password ='" + pass + "'";
                 connection.Open();
                 MySqlDataReader row;
                 MySqlCommand command = new MySqlCommand(query, connection);
                 row=command.ExecuteReader();
-                if (row.HasRows)
+                row.Read();
+                if (row.HasRows && row[2].ToString() == "Admin") 
                 {
                     this.Hide();
                     AdminDashboard ad = new AdminDashboard();
                     ad.Show();
 
+                }
+                else if(row.HasRows && row[2].ToString() == "Attendant")
+                {
+                    this.Hide();
+                    AttendantDashboard ad = new AttendantDashboard();
+                    ad.Show();
                 }
                 else
                 {

@@ -24,6 +24,7 @@ namespace ManagementSystem
         public RecordTransaction()
         {
             InitializeComponent();
+            loaddata();
         }
        
 
@@ -51,6 +52,17 @@ namespace ManagementSystem
                 
             }
         }
+        public void loaddata()
+        {
+            connection = new MySqlConnection(connectionstring);
+            connection.Open();
+            MySqlCommand command = connection.CreateCommand();
+            command.CommandText = "Select * from transactions";
+            MySqlDataAdapter da = new MySqlDataAdapter(command);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
+        }
 
         private void label3_Click(object sender, EventArgs e)
         {
@@ -66,6 +78,7 @@ namespace ManagementSystem
             String product = product_name.Text;
             String price = product_price.Text;
             String quantity = product_quantity.Text;
+            DateTime time = DateTime.Today;
 
                 
 
@@ -74,14 +87,16 @@ namespace ManagementSystem
                 connection = new MySqlConnection(connectionstring);
                 connection.Open();
                 MySqlCommand command = connection.CreateCommand();
-                command.CommandText="Insert into transactions(customer_name,attendant_name,product_name) values(?customerName,?AttendantName,?product)";
+                command.CommandText="Insert into transactions(customer_name,attendant_name,product_name,transaction_date) values(?customerName,?AttendantName,?product,?time)";
                 //connection.Open();
                 command.Parameters.AddWithValue("?customerName", customerName);
                 command.Parameters.AddWithValue("?AttendantName", AttendantName);
                 command.Parameters.AddWithValue("?product", product);
+                command.Parameters.AddWithValue("?time", time);
                 command.ExecuteNonQuery();
                 connection.Close();
                 MessageBox.Show("Transaction has been recorded successfully");
+                loaddata();
             }
             else
             {
@@ -93,6 +108,18 @@ namespace ManagementSystem
         private void qrcode_TextChanged(object sender, EventArgs e)
         {
             load_details();
+        }
+
+        private void generateReceipt_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void closeform_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AdminDashboard admin = new AdminDashboard();
+            admin.Show();
         }
     }
 }

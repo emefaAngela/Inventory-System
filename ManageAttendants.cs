@@ -132,5 +132,12 @@ namespace ManagementSystem
                 MessageBox.Show("Please Provide Details!");
             }
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+            AdminDashboard admin = new AdminDashboard();
+            admin.Show();
+        }
     }
 }

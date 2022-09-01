@@ -54,6 +54,7 @@ namespace ManagementSystem
             this.product_quantity = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.closeform = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -291,11 +292,25 @@ namespace ManagementSystem
             this.dataGridView1.Size = new System.Drawing.Size(776, 161);
             this.dataGridView1.TabIndex = 26;
             // 
+            // closeform
+            // 
+            this.closeform.BackColor = System.Drawing.Color.White;
+            this.closeform.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.closeform.ForeColor = System.Drawing.Color.Red;
+            this.closeform.Location = new System.Drawing.Point(751, 12);
+            this.closeform.Name = "closeform";
+            this.closeform.Size = new System.Drawing.Size(37, 36);
+            this.closeform.TabIndex = 27;
+            this.closeform.Text = "X";
+            this.closeform.UseVisualStyleBackColor = false;
+            this.closeform.Click += new System.EventHandler(this.closeform_Click);
+            // 
             // ManageProducts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.closeform);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.product_quantity);
             this.Controls.Add(this.label13);
@@ -356,5 +371,6 @@ namespace ManagementSystem
         private System.Windows.Forms.TextBox product_quantity;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button closeform;
     }
 }

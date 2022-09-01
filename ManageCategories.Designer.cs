@@ -40,6 +40,7 @@ namespace ManagementSystem
             this.category_des = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.category_id = new System.Windows.Forms.TextBox();
+            this.closeform = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -152,11 +153,25 @@ namespace ManagementSystem
             this.category_id.TabIndex = 12;
             this.category_id.Tag = "";
             // 
+            // closeform
+            // 
+            this.closeform.BackColor = System.Drawing.Color.White;
+            this.closeform.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.closeform.ForeColor = System.Drawing.Color.Red;
+            this.closeform.Location = new System.Drawing.Point(716, 12);
+            this.closeform.Name = "closeform";
+            this.closeform.Size = new System.Drawing.Size(35, 34);
+            this.closeform.TabIndex = 13;
+            this.closeform.Text = "X";
+            this.closeform.UseVisualStyleBackColor = false;
+            this.closeform.Click += new System.EventHandler(this.closeform_Click);
+            // 
             // ManageCategories
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.closeform);
             this.Controls.Add(this.category_id);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.category_des);
@@ -189,5 +204,6 @@ namespace ManagementSystem
         private System.Windows.Forms.TextBox category_des;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox category_id;
+        private System.Windows.Forms.Button closeform;
     }
 }

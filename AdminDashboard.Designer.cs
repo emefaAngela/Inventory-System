@@ -37,11 +37,12 @@ namespace ManagementSystem
             this.button2 = new System.Windows.Forms.Button();
             this.Open_products_dash = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.Total_products = new System.Windows.Forms.TextBox();
             this.button11 = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.TotalTransactions = new System.Windows.Forms.Label();
+            this.totalAttendants = new System.Windows.Forms.Label();
+            this.totalcategories = new System.Windows.Forms.Label();
+            this.totalproducts = new System.Windows.Forms.Label();
             this.button10 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
@@ -72,11 +73,12 @@ namespace ManagementSystem
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.Total_products);
             this.splitContainer1.Panel2.Controls.Add(this.button11);
-            this.splitContainer1.Panel2.Controls.Add(this.label5);
-            this.splitContainer1.Panel2.Controls.Add(this.label4);
-            this.splitContainer1.Panel2.Controls.Add(this.label3);
-            this.splitContainer1.Panel2.Controls.Add(this.label2);
+            this.splitContainer1.Panel2.Controls.Add(this.TotalTransactions);
+            this.splitContainer1.Panel2.Controls.Add(this.totalAttendants);
+            this.splitContainer1.Panel2.Controls.Add(this.totalcategories);
+            this.splitContainer1.Panel2.Controls.Add(this.totalproducts);
             this.splitContainer1.Panel2.Controls.Add(this.button10);
             this.splitContainer1.Panel2.Controls.Add(this.button9);
             this.splitContainer1.Panel2.Controls.Add(this.button8);
@@ -107,9 +109,10 @@ namespace ManagementSystem
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(105, 30);
             this.button5.TabIndex = 4;
-            this.button5.Text = "Tills";
+            this.button5.Text = "Sales(Till)";
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
@@ -179,6 +182,14 @@ namespace ManagementSystem
             this.label1.TabIndex = 0;
             this.label1.Text = "Sales  Inventory \r\nSystem";
             // 
+            // Total_products
+            // 
+            this.Total_products.Location = new System.Drawing.Point(37, 37);
+            this.Total_products.Name = "Total_products";
+            this.Total_products.Size = new System.Drawing.Size(28, 26);
+            this.Total_products.TabIndex = 9;
+            this.Total_products.TextChanged += new System.EventHandler(this.Total_products_TextChanged);
+            // 
             // button11
             // 
             this.button11.BackColor = System.Drawing.Color.White;
@@ -191,45 +202,44 @@ namespace ManagementSystem
             this.button11.UseVisualStyleBackColor = false;
             this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
-            // label5
+            // TotalTransactions
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.DarkSalmon;
-            this.label5.Location = new System.Drawing.Point(33, 154);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(18, 20);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "0";
+            this.TotalTransactions.AutoSize = true;
+            this.TotalTransactions.BackColor = System.Drawing.Color.DarkSalmon;
+            this.TotalTransactions.Location = new System.Drawing.Point(33, 154);
+            this.TotalTransactions.Name = "TotalTransactions";
+            this.TotalTransactions.Size = new System.Drawing.Size(18, 20);
+            this.TotalTransactions.TabIndex = 7;
+            this.TotalTransactions.Text = "0";
             // 
-            // label4
+            // totalAttendants
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.label4.Location = new System.Drawing.Point(367, 37);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(18, 20);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "0";
+            this.totalAttendants.AutoSize = true;
+            this.totalAttendants.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.totalAttendants.Location = new System.Drawing.Point(367, 37);
+            this.totalAttendants.Name = "totalAttendants";
+            this.totalAttendants.Size = new System.Drawing.Size(18, 20);
+            this.totalAttendants.TabIndex = 6;
+            this.totalAttendants.Text = "0";
             // 
-            // label3
+            // totalcategories
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.PaleVioletRed;
-            this.label3.Location = new System.Drawing.Point(201, 37);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(18, 20);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "0";
+            this.totalcategories.AutoSize = true;
+            this.totalcategories.BackColor = System.Drawing.Color.PaleVioletRed;
+            this.totalcategories.Location = new System.Drawing.Point(201, 37);
+            this.totalcategories.Name = "totalcategories";
+            this.totalcategories.Size = new System.Drawing.Size(18, 20);
+            this.totalcategories.TabIndex = 5;
+            this.totalcategories.Text = "0";
             // 
-            // label2
+            // totalproducts
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.SlateBlue;
-            this.label2.Location = new System.Drawing.Point(33, 37);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(18, 20);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "0";
+            this.totalproducts.AutoSize = true;
+            this.totalproducts.BackColor = System.Drawing.Color.SlateBlue;
+            this.totalproducts.Location = new System.Drawing.Point(33, 37);
+            this.totalproducts.Name = "totalproducts";
+            this.totalproducts.Size = new System.Drawing.Size(0, 20);
+            this.totalproducts.TabIndex = 4;
             // 
             // button10
             // 
@@ -305,14 +315,15 @@ namespace ManagementSystem
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button Open_products_dash;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label totalproducts;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label TotalTransactions;
+        private System.Windows.Forms.Label totalAttendants;
+        private System.Windows.Forms.Label totalcategories;
         private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.TextBox Total_products;
     }
 }
