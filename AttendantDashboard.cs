@@ -30,5 +30,31 @@ namespace ManagementSystem
             Form2 login = new Form2();
             login.Show();
         }
+
+        private void Products_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ManageProducts manageProducts = new ManageProducts();
+            manageProducts.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ManageSales manageSales = new ManageSales();
+            manageSales.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ManageCategories manageCategories = new ManageCategories();
+            manageCategories.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

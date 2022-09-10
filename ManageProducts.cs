@@ -182,9 +182,9 @@ namespace ManagementSystem
 
         private void closeform_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            AdminDashboard admin = new AdminDashboard();
-            admin.Show();
+            this.Close();
+            //AdminDashboard admin = new AdminDashboard();
+            //admin.Show();
         }
     }
 }

@@ -93,7 +93,6 @@
     <Compile Include="AttendantDashboard.Designer.cs">
       <DependentUpon>AttendantDashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="DBconnection.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

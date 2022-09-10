@@ -92,6 +92,7 @@ namespace ManagementSystem
             this.Products.Text = "Products";
             this.Products.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Products.UseVisualStyleBackColor = false;
+            this.Products.Click += new System.EventHandler(this.Products_Click);
             // 
             // button1
             // 
@@ -105,6 +106,7 @@ namespace ManagementSystem
             this.button1.Text = "Transactions";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -118,6 +120,7 @@ namespace ManagementSystem
             this.button2.Text = "Categories";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -131,6 +134,7 @@ namespace ManagementSystem
             this.button3.Text = "Tills";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // logout_attendant
             // 
